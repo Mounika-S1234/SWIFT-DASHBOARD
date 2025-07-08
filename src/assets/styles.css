@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Main container for the whole application content, excluding the header from its padding for full width header */
+.app-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* To contain header's rounded corners */
+}
+
+/* General button styling - specific buttons might override this */
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  /* margin-right: 10px; Removed as often handled by parent flex/gap */
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* General input field styling - specific inputs might override */
+/* .input-field { This style moved and refined in specific component CSS files } */
+
+/* Pagination styling (can stay here or move to Pagination.css) */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 20px; Removed from here, now handled by dashboard-bottom-bar */
+  flex-wrap: wrap;
+  gap: 5px; /* Space between pagination buttons */
+}
+
+.pagination button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  /* margin: 0 4px; Removed */
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #eee;
+}
+
+/* .pagination select { This style moved and refined in CommentsDashboard.css } */
+
+/* Responsive adjustments for overall layout */
+@media (max-width: 768px) {
+  .app-container {
+    margin: 10px;
+    padding: 0; /* Remove app-container padding as content inside will have it */
+    border-radius: 0; /* Remove border-radius on small screens for full width */
+    box-shadow: none; /* Remove shadow on small screens */
+  }
+}

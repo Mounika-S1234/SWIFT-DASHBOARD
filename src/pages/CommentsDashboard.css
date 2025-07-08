@@ -1,0 +1,150 @@
+.dashboard-content {
+  padding: 20px;
+}
+
+.dashboard-controls-top {
+  display: flex;
+  justify-content: space-between; /* Space out the sort buttons and search bar */
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 15px; /* Gap between elements when wrapping */
+}
+
+.sort-buttons-group {
+  display: flex;
+  gap: 10px; /* Space between sort buttons */
+}
+
+.sort-button {
+  background-color: #f0f0f0; /* Light background for buttons */
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.sort-button.active-sort {
+  background-color: #e6e6e6; /* Slightly darker when active */
+  border-color: #ccc;
+  font-weight: bold;
+}
+
+.sort-button:hover {
+  background-color: #e0e0e0;
+}
+
+.search-input-container {
+  position: relative;
+  width: 300px; /* Adjust width as needed */
+}
+
+.search-input-field {
+  width: 100%;
+  padding: 8px 10px 8px 35px; /* Adjust padding for icon */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.search-input-field::placeholder {
+  color: #999;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 16px;
+}
+
+/* Table specific styling (moved from global styles for clarity/overriding) */
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Slight shadow as in wireframe */
+}
+
+.table-container th,
+.table-container td {
+  border: 1px solid #eee; /* Lighter border for cells */
+  padding: 12px; /* More padding for better spacing */
+  text-align: left;
+}
+
+.table-container th {
+  background-color: #f2f2f2;
+  font-weight: bold; /* Table headers are bold */
+  color: #333;
+  cursor: pointer; /* Indicate sortable */
+  white-space: nowrap; /* Prevent wrapping in headers */
+}
+
+.table-container th:hover {
+  background-color: #e0e0e0;
+}
+
+.table-container tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Zebra striping */
+}
+
+.table-container tbody tr:hover {
+  background-color: #f0f0f0; /* Hover effect for rows */
+}
+
+/* Pagination and Page Size selector */
+.dashboard-bottom-bar {
+  display: flex;
+  justify-content: space-between; /* Align pagination and page size selector */
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 15px;
+}
+
+.page-size-selector label {
+  margin-right: 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+.page-info {
+  font-size: 14px;
+  color: #555;
+  margin-left: auto; /* Push info to the right if space allows */
+}
+
+/* Ensure global button/input styles don't conflict */
+.input-field { /* Used for page size select */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  /* Removed margin-right as it's now controlled by parent gap */
+}
+
+
+@media (max-width: 768px) {
+  .dashboard-controls-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sort-buttons-group {
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  .search-input-container {
+    width: 100%; /* Full width search on small screens */
+  }
+  .dashboard-bottom-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .page-info {
+    margin-left: 0; /* Center info on small screens */
+  }
+}

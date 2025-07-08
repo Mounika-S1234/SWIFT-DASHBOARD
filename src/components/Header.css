@@ -1,0 +1,52 @@
+.app-header {
+  display: flex;
+  justify-content: space-between; /* This is key: pushes children to opposite ends */
+  align-items: center;
+  background-color: hsl(251, 14%, 24%); /* Dark background as in the image */
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px 8px 0 0;
+}
+.swift-logo{
+  background-image:url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBhIQBxMUFRMVEhYZGRgWDhoUFxEWFhYZFhUWFh8kHCsgGBolGxUVITEtJSktLjouGB8zODMsNzQtLisBCgoKDg0ODg8OFS0ZFRkrKzcrNy0rLTcrKzc3NysrKysrKystKy0rKysrLSsrKystKystKysrKy0rLSsrKy03N//AABEIAGQAZAMBIgACEQEDEQH/xAAZAAEAAwEBAAAAAAAAAAAAAAAABQYHBAP/xAA5EAACAQMCAgcEBgsAAAAAAAAAAQIDBBEFEgYhBzFBUXGBoWFikcETFCIkMtEjM0NScoKTo7Gy8P/EABkBAQADAQEAAAAAAAAAAAAAAAABAgMFBP/EAB4RAQEBAQACAgMAAAAAAAAAAAABAhEDEiExEyJB/9oADAMBAAIRAxEAPwCqAA5LnAAAAAAAAAAAAAAAAAAAAAAD2s7S4vbiNO0i5Sk+SXb+XiXzSujmG1S1aq84zsp4WPGT6/h5ldbzn7TJ1noNcjwHoKjhwm/a6ssnDfdHOnVI/cqlSD97FSPyfqUnlyn1rMQSmu6De6FXUb1LEs7ZJ5jPHX5+wizSWX5ioACQAAAAAAABqHRrpVO30n6zNLfVbw+2ME8Y82m/gTXE2v0NAs1Oqt0pNqMc43Ndbb7Evmjh6O7mFxwxTjHrpynF+O5zXpNHrxhw5LiC1h9FNRqU3Jx3L7Mk8ZTxzXUufPqPJeXf7NP58KhPpG1Zz/R06KXc4Tb83uJLTOkeEpY1Olt96m8pfyv8ys3nB2vWn4qLku+ElPPkufoQ1ehWtp7biMovulFxfwZt6Yv0r2rXx1xLZ61Tp07BNxi3JycdvPGEl/3cU8A0zmSciKAAlAAAAAAAACV4e1660G7323OLxug/wzXyftNE07jvRruCVw5Upd04trPsks+uDM7XStQu7d1LWlUnBPrjBtHG00+ZnrGdJlsbxaahZXq+6VYT/hmpP0PS6tbe7pbbqEZx7pRUl6mBptPkaT0aalqF5CtC6lKcIKO1yeXFvP2cvm/kZa8frOyrS9RHHHCdPS6f1jT/ANXlKUct7G+pp93Z8PKmG18YKL4ZuN/V9G/j2euDFDTxaup8osAAaqgAAAAAAANh4I1CzutBpQtWt1OCjKOecZLreO5vnn2kjf6JpeoSzeUYSfftxJ+a5mIUqk6M91JuLXapYa8yctOMdetlhVnJe/BT9Ws+phrxXvc1b2aHHgrh6Msqh/dqNf7E1aWttZUNlpGMIrsSwvEy99IGtuP7L+m8/wCSJ1LiXV9Tji6qy2/uxxCL8VHGfMj8er91PYtHSFxJQuKP1SwkpLKdSSeY8uqK7+eG/BFBANs5mZyK29AAWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//2Q==") ;
+  height:20px;
+  width:20px;
+}
+.header-left .swift-logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #4CAF50; /* Green color for SWIFT */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-initials {
+  background-color: #e0e0e0;
+  color: #333;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.user-name-display {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column; /* Or keep row if it looks better on mobile */
+    padding: 10px;
+  }
+  .header-right {
+    margin-top: 10px;
+  }
+}
